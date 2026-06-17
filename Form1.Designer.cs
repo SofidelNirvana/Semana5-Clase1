@@ -34,6 +34,9 @@
             btnCancelar = new Button();
             lblClientes = new Label();
             dataGridView1 = new DataGridView();
+            btnRoles = new Button();
+            btnUsuarios = new Button();
+            btnSalir = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -55,6 +58,7 @@
             btnEliminar.TabIndex = 1;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnEditar
             // 
@@ -64,6 +68,7 @@
             btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnCancelar
             // 
@@ -73,6 +78,7 @@
             btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // lblClientes
             // 
@@ -88,15 +94,48 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 37);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(381, 215);
+            dataGridView1.Size = new Size(790, 215);
             dataGridView1.TabIndex = 5;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // btnRoles
+            // 
+            btnRoles.Location = new Point(13, 299);
+            btnRoles.Name = "btnRoles";
+            btnRoles.Size = new Size(188, 35);
+            btnRoles.TabIndex = 7;
+            btnRoles.Text = "Gestión de Roles";
+            btnRoles.UseVisualStyleBackColor = true;
+            btnRoles.Click += btnRoles_Click;
+            // 
+            // btnUsuarios
+            // 
+            btnUsuarios.Location = new Point(207, 299);
+            btnUsuarios.Name = "btnUsuarios";
+            btnUsuarios.Size = new Size(288, 35);
+            btnUsuarios.TabIndex = 8;
+            btnUsuarios.Text = "Gestión de Usuarios";
+            btnUsuarios.UseVisualStyleBackColor = true;
+            btnUsuarios.Click += btnUsuarios_Click;
+            // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(400, 258);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(95, 35);
+            btnSalir.TabIndex = 9;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(405, 306);
+            ClientSize = new Size(814, 430);
+            Controls.Add(btnSalir);
+            Controls.Add(btnUsuarios);
+            Controls.Add(btnRoles);
             Controls.Add(dataGridView1);
             Controls.Add(lblClientes);
             Controls.Add(btnCancelar);
@@ -121,5 +160,8 @@
         private Button btnCancelar;
         private Label lblClientes;
         private DataGridView dataGridView1;
+        private Button btnRoles;
+        private Button btnUsuarios;
+        private Button btnSalir;
     }
 }
